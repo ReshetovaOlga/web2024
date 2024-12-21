@@ -19,7 +19,6 @@
           <div>
             <button class="but-myth"> ввести </button>
           </div>
-
         </form>
 
         <label class="from-row">

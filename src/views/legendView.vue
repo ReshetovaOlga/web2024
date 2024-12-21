@@ -1,13 +1,16 @@
 <script setup>
+import Illustration from "@/components/Legend/Illustration.vue";
 
+const legends = [  {
+  id: 1,
+  picture:'https://get.wallhere.com/photo/landscape-forest-fantasy-art-anime-anime-girls-jungle-swamp-wetland-screenshot-woodland-habitat-natural-environment-ecosystem-59878.jpg'
+},]
 </script>
 
 <template>
   <main>
-    <div class="container-main">
-      <div class="product-item-but">
-        <img src="@/assets/pictures/pano2.jpg"/>
-      </div>
+    <div class="container-main" v-for="legend in legends" :key="legend.id">
+      <Illustration :legend="legend"/>
       <section class="list-legend-sel">
         <div class="text-legend">
           <p>
