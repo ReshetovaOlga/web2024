@@ -5,6 +5,12 @@ const legends = [  {
   id: 1,
   picture:'https://get.wallhere.com/photo/landscape-forest-fantasy-art-anime-anime-girls-jungle-swamp-wetland-screenshot-woodland-habitat-natural-environment-ecosystem-59878.jpg'
 },]
+
+const like =()=>{
+  alert('нравится')
+  //send request to API
+}
+
 </script>
 
 <template>
@@ -50,7 +56,9 @@ const legends = [  {
         <ul>
           <li class="cart">
             <div class="product-item-but">
-              <button class="but-myth"> нравится </button>
+              <button class="but-myth" @click="like">
+                нравится
+              </button>
             </div>
           </li>
         </ul>

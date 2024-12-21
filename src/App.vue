@@ -1,3 +1,17 @@
+<script setup lang="ts">
+import {ref} from'vue'
+
+const searchResult = ref('')
+const isShowSearch = ref(false)
+
+const search = () =>{
+  if(searchResult.value.length > 3){
+    isShowSearch.value = true
+  }else {
+    isShowSearch.value = false
+  }
+}
+</script>
 
 <template>
   <header>
@@ -12,8 +26,8 @@
         <div class="head-search">
           <ul>
             <li class="cart">
-              <input type="search">
-              <ul class="search-result hidden">
+              <input type="search" v-model="searchResult" @keyup="search">
+              <ul class="search-result" v-show="isShowSearch">
                 <li>Легенда</li>
                 <li>Легенда</li>
                 <li>Легенда</li>
@@ -56,5 +70,3 @@
   </footer>
 
 </template>
-<script setup lang="ts">
-</script>
